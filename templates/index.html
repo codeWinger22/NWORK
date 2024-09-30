@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Little Thoughtful Things ✨</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Quicksand', sans-serif;
+            background: linear-gradient(135deg, #fbc2eb, #a6c1ee);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: #ffffff;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            text-align: center;
+            max-width: 400px;
+            animation: slideIn 1s ease-out;
+        }
+        h1 {
+            font-size: 2.2em;
+            font-weight: 600;
+            color: #ff6b6b;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 1.2em;
+            color: #333;
+            margin-bottom: 30px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        label {
+            font-size: 1em;
+            color: #ff6b6b;
+            margin-bottom: 10px;
+            display: block;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 12px;
+            border-radius: 10px;
+            border: 2px solid #ff6b6b;
+            outline: none;
+            font-size: 1em;
+            transition: border-color 0.3s ease;
+        }
+        input[type="text"]:focus {
+            border-color: #ff4757;
+        }
+        .submit-btn {
+            background-color: #ff4757;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            width: 100%;
+        }
+        .submit-btn:hover {
+            background-color: #ff6b81;
+        }
+        @keyframes slideIn {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Little Thoughtful Things 💭</h1>
+        <p>I’d love to know your thoughts...</p>
+        <form action="/submit" method="POST">
+            <div class="form-group">
+                <label for="name">Your lovely name?</label>
+                <input type="text" id="name" name="name" placeholder="Tell me your name" required>
+            </div>
+            <div class="form-group">
+                <label for="call_time">When’s the best time for a call? (If you’d like!)</label>
+                <input type="text" id="call_time" name="call_time" placeholder="Your ideal call time" required>
+            </div>
+            <div class="form-group">
+                <label for="dish">What should I cook for you next Monday?</label>
+                <input type="text" id="dish" name="dish" placeholder="Your dream dish?" required>
+            </div>
+            <button type="submit" class="submit-btn">Submit Your Thoughts 💌</button>
+        </form>
+    </div>
+</body>
+</html>
