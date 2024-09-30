@@ -1,4 +1,4 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -122,96 +122,6 @@
         <a href="/cards"><button class="start-btn">Let’s Go!</button></a>
     </div>
 </body>
-</html> -->
-
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Greeting Cycle with Doodles</title>
-    <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #ffe1e6;
-            margin: 0;
-            overflow: hidden;
-            position: relative;
-        }
-
-        #greeting {
-            font-size: 2em;
-            color: #ff5e78;
-            z-index: 2;
-            text-align: center;
-            position: relative;
-        }
-
-        .doodle {
-            position: absolute;
-            animation: float 3s ease-in-out infinite;
-        }
-
-        /* Keyframes for floating animation */
-        @keyframes float {
-            0% { transform: translateY(0); }
-            50% { transform: translateY(-20px); }
-            100% { transform: translateY(0); }
-        }
-
-        /* Specific styles for doodles */
-        .cat {
-            width: 50px;
-            left: 10%;
-            top: 20%;
-            animation-duration: 4s;
-        }
-
-        .food {
-            width: 50px;
-            left: 70%;
-            top: 40%;
-            animation-duration: 5s;
-        }
-
-        .drink {
-            width: 50px;
-            left: 40%;
-            top: 60%;
-            animation-duration: 6s;
-        }
-    </style>
-</head>
-<body>
-    <div id="greeting">Hello</div>
-
-    <!-- Doodle Images -->
-    <img src="https://example.com/cat.png" alt="Cat" class="doodle cat">
-    <img src="https://example.com/food.png" alt="Food" class="doodle food">
-    <img src="https://example.com/drink.png" alt="Drink" class="doodle drink">
-
-    <script>
-        const greetings = [
-            "Hello",
-            "Good Morning",
-            "Good Afternoon",
-            "Good Evening",
-            "Good Night"
-        ];
-
-        let currentIndex = 0;
-
-        function updateGreeting() {
-            document.getElementById("greeting").innerText = greetings[currentIndex];
-            currentIndex = (currentIndex + 1) % greetings.length;
-        }
-
-        setInterval(updateGreeting, 2000);
-    </script>
-</body>
 </html>
+
+
